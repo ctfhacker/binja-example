@@ -193,3 +193,6 @@ Make the instrutions presentable by looking up the symbol for the function
     --------------------
 ```
 
+@[1](var_118 is used in the sprintf)
+@[2-4](var_118 was used in a read)
+@[6-8](var_118 was used in a strlen)
