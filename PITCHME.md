@@ -171,7 +171,7 @@ for block in func:
 
 @[1-3](Loop through all instructions in the current function)
 @[4-5](Ignore any instruction that doesn't involve our found stack variable)
-@[7-8](Grab all of the uses and retrieve their corresponding instructions )
+@[7-9](Grab all of the uses and retrieve their corresponding instructions )
 
 ---
 Make the instrutions presentable by looking up the symbol for the function
