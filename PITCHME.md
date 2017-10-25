@@ -85,13 +85,13 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```python
 m = re.findall('%[^%]', format_str)
 for fmt, param in zip(m, sprintf.params[2:]):
-    print(format_str, fmt, param, param.operation)
+    print(format_str, fmt, param.operation)
 ```
 
 ```
-('/tmp/%s_%d', '%s', <il: rdx_1#3>, <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
-('/tmp/%s_%d', '%d', <il: rcx_1#1>, <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
-('SUCCESS: %s', '%s', <il: 0x400967>, <MediumLevelILOperation.MLIL_CONST: 12>)
+('/tmp/%s_%d', '%s', <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
+('/tmp/%s_%d', '%d', <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
+('SUCCESS: %s', '%s', <MediumLevelILOperation.MLIL_CONST: 12>)
 ```
 
 ---
