@@ -73,8 +73,8 @@ for sprintf in sprintfs:
 
 ---
 ## Find constant %s 
-
 Filter xrefs with constant %s
+
 ```
 sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
