@@ -117,9 +117,9 @@ sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 The parameters for this sprintf
 
 ```json
-(<il: mem#8 = 0x400650(rdi_1#3, 0x40095c, rdx_1#3, rcx_1#1) @ mem#7>, 
+(<il: mem#8 = 0x400650(rdi_1#3, 0x40095c, rdx_1#3, rcx_1#1)>, 
 	'%s', <stack frame offset -0x118>)
-(<il: mem#8 = 0x400650(rdi_1#3, 0x40095c, rdx_1#3, rcx_1#1) @ mem#7>, 
+(<il: mem#8 = 0x400650(rdi_1#3, 0x40095c, rdx_1#3, rcx_1#1)>, 
 	'%d', <undetermined>)
 ```
 
