@@ -148,6 +148,9 @@ definition_index = curr_func.get_ssa_var_definition(param.src)
 curr_ins = curr_func[definition_index]
 ```
 
+@[1](Grab instruction index for the definition)
+@[2](Extract the instruction at the retrieved index)
+
 ---
 Loop through all instrutions looking for uses of the same stack variable above the current instruction
 
