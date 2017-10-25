@@ -6,6 +6,7 @@
 Not to positively identify all bugs, but guide the analyst to certain parts of the code that might contain bugs
 
 ---?code=test.c&lang=c
+@[3-10]
 
 +++
 ## Bug class
