@@ -155,3 +155,40 @@ curr_ins = curr_func[definition_index]
 Loop through all instrutions looking for uses of the same stack variable above the current instruction
 
 ![Want to find](variables.png)
+
+---
+```python
+# Pseudocode
+for block in func:
+    for il in block:
+        if il.src.src != wanted_variable:
+            continue
+
+        dest_var = il.dest
+        uses = [curr_func[x] for x in curr_func.get_ssa_var_uses(dst_var) if x < instr_index]
+```
+
+@[1-3](Loop through all instructions in the current function)
+@[4-5](Ignore any instruction that doesn't involve our found stack variable)
+@[7-8](Grab all of the uses and retrieve their corresponding instructions )
+
+---
+Make the instrutions presentable by looking up the symbol for the function
+
+```
+0x400610 -> read
+0x4005f0 -> strlen
+```
+
+---
+```
+[0x40081e] sprintf(/tmp/<stack frame offset -0x118>_%d)
+    --------------------
+    rsi_1#2 = &var_118
+    mem#5 = read(0, rsi_1#2, 0x100) @ mem#3
+    --------------------
+    rdi#2 = &var_118
+    rax_3#4, mem#7 = strlen(rdi#1) @ mem#6
+    --------------------
+```
+

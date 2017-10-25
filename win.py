@@ -92,6 +92,5 @@ for sprintf in sprintfs:
                     print('    {}'.format(x))
 
             print('    ' + '-' * 20)
-            """
         else:
             new_format_str = new_format_str.replace(fmt, str(param.value))
