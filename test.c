@@ -14,8 +14,8 @@ int main() {
             printf("Enter log file\n");
             read(0, buf, 0x100);
             path = malloc(100);
-            sprintf(path, "/tmp/%s", buf);
-            sprintf(result, "%s\n", "Success! Log file created.");
+            sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
+            sprintf(result, "SUCCESS: %s\n", "Log file created.");
             break;
         default:
             sprintf(result, "Sorry, choice %d is not accepted\n", choice);
