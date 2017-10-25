@@ -165,7 +165,7 @@ for block in func:
             continue
 
         dest_var = il.dest
-        uses = [curr_func[x] for x in curr_func.get_ssa_var_uses(dst_var) if x < instr_index]
+        uses = [curr_func.get_ssa_var_uses(dst_var) if x < instr_index]
 ```
 
 @[1-3](Loop through all instructions in the current function)
