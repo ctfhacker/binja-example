@@ -36,7 +36,7 @@ sprintf_addr = bv.symbols['sprintf'].address
 sprintf_xrefs = bv.get_code_refs(sprintf_addr)
 ```
 @[1-3](Get core Binary View object)
-@[4-6](Get all cross references for sprintf)
+@[4-7](Get all cross references for sprintf)
 
 ---
 ```python
