@@ -7,14 +7,21 @@ Not to positively identify all bugs, but guide the analyst to certain parts of t
 
 ---?code=test.c&lang=c
 
-@[10-22]
-@[17](sprintf with %s using buf into path)
-@[15](buf comes from a read)
-@[16](path comes from a malloc of 100)
+```c
+printf("Enter log file\n");
+read(0, buf, 0x100);
+path = malloc(100);
+sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
+sprintf(result, "SUCCESS: %s\n", "Log file created.");
+```
+
+@[4](sprintf with %s using buf into path)
+@[2](buf comes from a read)
+@[3](path comes from a malloc of 100)
 
 ---
 ## Bug
-@[15-17](Buffer overflow of 0x100 into a buffer of 100)
+Buffer overflow of 0x100 into a buffer of 100
 
 ---
 ## Bug class
