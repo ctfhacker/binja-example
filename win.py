@@ -71,6 +71,7 @@ for sprintf in sprintfs:
     # Easy cases.. Extend for more robust matching
     m = re.findall('%[^%]', format_str)
     for fmt, param in zip(m, sprintf.params[2:]):
+        print(format_str, fmt, param, param.operation)
         if fmt == '%s' and param.operation == MediumLevelILOperation.MLIL_CONST:
             # param = string_from_addr(bv, param.constant)
             # new_format_str = new_format_str.replace(fmt, param)

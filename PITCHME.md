@@ -79,3 +79,26 @@ Filter xrefs with constant %s
 sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
 
+---
+# Easy cases.. Extend for more robust matching
+
+```python
+m = re.findall('%[^%]', format_str)
+for fmt, param in zip(m, sprintf.params[2:]):
+    print(format_str, fmt, param, param.operation)
+```
+
+```
+('/tmp/%s_%d', '%s', <il: rdx_1#3>, <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
+('/tmp/%s_%d', '%d', <il: rcx_1#1>, <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
+('SUCCESS: %s', '%s', <il: 0x400967>, <MediumLevelILOperation.MLIL_CONST: 12>)
+```
+
+---
+```python
+m = re.findall('%[^%]', format_str)
+for fmt, param in zip(m, sprintf.params[2:]):
+    if fmt == '%s' and param.operation == MediumLevelILOperation.MLIL_CONST:
+        continue
+```
+@[3-4](Add the check to ignore constant string parameters)
