@@ -47,48 +47,31 @@ sprintf_xrefs = bv.get_code_refs(sprintf_addr)
 ```
 
 ---
-Each cross reference contains the following attributes
+Grab the Medium Level IL for each cross reference
 
-```
->>> print(vars(sprintf_refs[0]))
-{'function': <func: x86_64@0x400766>, 
- 'arch': <arch: x86_64>, 
- 'address': 4196360L}
-```
-
-We care about the **function** and the **address**
-
----
-## Goal
-Retrieve the MLIL instruction associated with each xref
-
-```
-xref.function.get_low_level_il_at(xref.address).medium_level_il
-```
-OR **with a certain someone's pull request**
 ```
 xref.medium_level_il
 ```
 
----
-@[58](List comprehension to go from xref -> MLILSSA)
-
-We'll get to why Medium Level IL SSA form later
+Why Medium Level IL? More dataflow analysis is available than assembly or Low Level IL
 
 ---
 ## Filter xrefs
 Where %s corresponds to a constant string (since we can't control it)
 
-@[64]
+```python
+for sprintf in sprintfs:
+    format_str = string_from_addr(bv, sprintf.params[1].constant).replace('\n', '')
+    if '%s' not in format_str:
+        continue
+```
 
-`.params` gives parameter variables for a called function
-
+@[1](For each sprintf cross reference)
+@[2](Grab the format string constant from the binary)
 ```
 0x40095c -> /tmp/%s_%d
 ```
-
----
-@[65-66](Ignore all format strings without a %s)
+@[3-4](Ignore any format strings that don't contain %s)
 
 ---
 ## Find constant %s 
