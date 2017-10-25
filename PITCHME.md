@@ -132,4 +132,9 @@ We only care about the %s parameters that come from the stack
 if fmt == '%s' and \
     param.value.type == RegisterValueType.StackFrameOffset:
     new_format_str = new_format_str.replace(fmt, str(param.value))
+    print('[0x{:x}] sprintf({})'.format(sprintf.address, new_format_str))
+```
+
+```
+[0x40081e] sprintf(/tmp/<stack frame offset -0x118>_%d)
 ```
