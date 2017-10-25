@@ -127,7 +127,8 @@ The parameters for this sprintf
 We only care about the %s parameters that come from the stack
 
 ```
-# Found a stack offset variable. Find where it might have been set
+# Found a stack offset variable
+# Find where it might have been set
 if fmt == '%s' and \
     param.value.type == RegisterValueType.StackFrameOffset:
     new_format_str = new_format_str.replace(fmt, str(param.value))
