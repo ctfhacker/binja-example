@@ -80,7 +80,9 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
 
 ---
-## Easy cases.. Extend for more robust matching
+## Format strings
+
+Align format strings with their parameters
 
 ```python
 m = re.findall('%[^%]', format_str)
