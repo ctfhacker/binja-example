@@ -70,7 +70,7 @@ OR **with a certain someone's pull request**
 xref.medium_level_il
 ```
 
-+++
+---
 @[58](List comprehension to go from xref -> MLILSSA)
 
 We'll get to why Medium Level IL SSA form later
@@ -87,9 +87,8 @@ Where %s corresponds to a constant string (since we can't control it)
 0x40095c -> /tmp/%s_%d
 ```
 
-+++
+---
 @[65-66](Ignore all format strings without a %s)
 
 ---
 ## Find constant %s 
-@[71-77]()
