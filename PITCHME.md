@@ -68,8 +68,15 @@ for sprintf in sprintfs:
 ```
 
 @[1](For each sprintf cross reference)
-@[2](Grab the format string constant from the binary -- 0x40095c -> /tmp/%s_%d)
+@[2](Grab the format string constant from the binary: 0x40095c -> /tmp/%s_%d)
 @[3-4](Ignore any format strings that don't contain %s)
 
 ---
 ## Find constant %s 
+
+With only the cross references with %s in hand
+filter xrefs with constant %s
+```
+sprintf(result, "SUCCESS: %s\n", "Log file created.");
+```
+
