@@ -57,8 +57,9 @@ Why Medium Level IL? More dataflow analysis is available than assembly or Low Le
 
 ---
 ## Filter xrefs
-Where %s corresponds to a constant string (since we can't control it)
+Ignore format strings with %s corresponding to a constant string (since we can't control it)
 
+---
 ```python
 for sprintf in sprintfs:
     format_str = string_from_addr(bv, sprintf.params[1].constant).replace('\n', '')
