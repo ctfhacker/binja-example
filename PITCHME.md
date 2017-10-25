@@ -106,10 +106,15 @@ for fmt, param in zip(m, sprintf.params[2:]):
 ---
 ### What do we currently have?
 
+Isolating the other sprintfs leave one
+
 ```c
 sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 ```
 
+---
+
+The parameters for this sprintf
 ```
 (<il: mem#8 = 0x400650(rdi_1#3, 0x40095c, rdx_1#3, rcx_1#1) @ mem#7>, 
 	'%s', <stack frame offset -0x118>)
@@ -117,6 +122,8 @@ sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 	'%d', <undetermined>)
 ```
 
+---
+We only care about the %s parameters that come from the stack
 
 ```
 # Found a stack offset variable. Find where it might have been set
