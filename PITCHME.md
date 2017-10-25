@@ -75,7 +75,8 @@ for sprintf in sprintfs:
 ## Find constant %s 
 
 With only the cross references with %s in hand
-filter xrefs with constant %s
+
+Filter xrefs with constant %s
 ```
 sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
