@@ -7,8 +7,7 @@ Not to positively identify all bugs, but guide the analyst to certain parts of t
 
 ---?code=test.c&lang=c
 
-@[1-3]
-@[4-6]
+@[10-22]
 
 +++
 ## Bug class
