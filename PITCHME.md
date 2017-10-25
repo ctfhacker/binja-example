@@ -67,10 +67,7 @@ for sprintf in sprintfs:
 ```
 
 @[1](For each sprintf cross reference)
-@[2](Grab the format string constant from the binary)
-```
-0x40095c -> /tmp/%s_%d
-```
+@[2](Grab the format string constant from the binary -- 0x40095c -> /tmp/%s_%d)
 @[3-4](Ignore any format strings that don't contain %s)
 
 ---
