@@ -139,3 +139,16 @@ if fmt == '%s' and \
 
 @[1-7](Make sure we have a %s corresponding to a stack variable)
 @[8](Print what we currently have as the sprintf)
+
+---
+Grab location of where the stack variable was assigned
+
+```python
+definition_index = curr_func.get_ssa_var_definition(param.src) 
+curr_ins = curr_func[definition_index]
+```
+
+---
+Loop through all instrutions looking for uses of the same stack variable above the current instruction
+
+![Want to find](variables.png)

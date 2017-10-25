@@ -84,7 +84,7 @@ for sprintf in sprintfs:
         if fmt == '%s' and param.value.type == RegisterValueType.StackFrameOffset:
             new_format_str = new_format_str.replace(fmt, str(param.value))
             print('[0x{:x}] sprintf({})'.format(sprintf.address, new_format_str))
-            """
+
             uses = find_stack_var_uses(curr_func, param.src, sprintf.instr_index)
             for use in uses:
                 print('    ' + '-' * 20)
