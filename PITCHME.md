@@ -49,12 +49,14 @@ sprintf_xrefs = bv.get_code_refs(sprintf_addr)
 ---
 Each cross reference contains the following attributes
 
-```
+```python
 >>> print(vars(sprintf_refs[0]))
-{'function': <func: x86_64@0x400766>, 'arch': <arch: x86_64>, 'address': 4196360L}
+{'function': <func: x86_64@0x400766>, 
+ 'arch': <arch: x86_64>, 
+ 'address': 4196360L}
 ```
 
-We care about the `function` and the `address`
+We care about the **function** and the **address**
 
 ---
 ## Goal
