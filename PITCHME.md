@@ -126,7 +126,7 @@ The parameters for this sprintf
 ---
 We only care about the %s parameters that come from the stack
 
-```
+```python
 # Found a stack offset variable
 # Find where it might have been set
 if fmt == '%s' and \
