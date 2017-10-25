@@ -80,7 +80,7 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
 
 ---
-# Easy cases.. Extend for more robust matching
+## Easy cases.. Extend for more robust matching
 
 ```python
 m = re.findall('%[^%]', format_str)
