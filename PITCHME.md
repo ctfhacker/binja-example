@@ -89,16 +89,16 @@ for fmt, param in zip(m, sprintf.params[2:]):
 ```
 
 ```
-('/tmp/%s_%d', '%s', <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
-('/tmp/%s_%d', '%d', <MediumLevelILOperation.MLIL_VAR_SSA: 80>)
-('SUCCESS: %s', '%s', <MediumLevelILOperation.MLIL_CONST: 12>)
+('/tmp/%s_%d', '%s', <MLIL_VAR_SSA: 80>)
+('/tmp/%s_%d', '%d', <MLIL_VAR_SSA: 80>)
+('SUCCESS: %s', '%s', <MLIL_CONST: 12>)
 ```
 
 ---
 ```python
 m = re.findall('%[^%]', format_str)
 for fmt, param in zip(m, sprintf.params[2:]):
-    if fmt == '%s' and param.operation == MediumLevelILOperation.MLIL_CONST:
+    if fmt == '%s' and param.operation == MLIL_CONST:
         continue
 ```
 @[3-4](Add the check to ignore constant string parameters)
