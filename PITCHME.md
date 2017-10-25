@@ -8,8 +8,15 @@ Not to positively identify all bugs, but guide the analyst to certain parts of t
 ---?code=test.c&lang=c
 
 @[10-22]
+@[17](sprintf with %s using buf into path)
+@[15](buf comes from a read)
+@[16](path comes from a malloc of 100)
 
-+++
+---
+## Bug
+@[15-17](Buffer overflow of 0x100 into a buffer of 100)
+
+---
 ## Bug class
 
 sprintf with a `%s` format string that is a non-constant parameter
