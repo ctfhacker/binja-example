@@ -5,7 +5,7 @@
 ## Core idea
 Not to positively identify all bugs, but guide the analyst to certain parts of the code that might contain bugs
 
----?code=test.c&lang=c
+---
 
 ```c
 printf("Enter log file\n");
