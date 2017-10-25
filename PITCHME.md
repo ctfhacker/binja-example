@@ -131,7 +131,8 @@ We only care about the %s parameters that come from the stack
 # Find where it might have been set
 if fmt == '%s' and \
     param.value.type == RegisterValueType.StackFrameOffset:
-    print('[0x{:x}] sprintf({})'.format(sprintf.address, new_format_str))
+    print('[0x{:x}] sprintf({})'.format(sprintf.address, 
+                                        new_format_str))
 
 [0x40081e] sprintf(/tmp/<stack frame offset -0x118>_%d)
 ```
