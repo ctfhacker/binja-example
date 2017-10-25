@@ -102,3 +102,24 @@ for fmt, param in zip(m, sprintf.params[2:]):
         continue
 ```
 @[3-4](Add the check to ignore constant string parameters)
+
+---
+### What do we currently have?
+
+```c
+sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
+```
+
+```
+(<il: mem#8 = 0x400650(rdi_1#3, 0x40095c, rdx_1#3, rcx_1#1) @ mem#7>, 
+	'%s', <stack frame offset -0x118>)
+(<il: mem#8 = 0x400650(rdi_1#3, 0x40095c, rdx_1#3, rcx_1#1) @ mem#7>, 
+	'%d', <undetermined>)
+```
+
+
+```
+# Found a stack offset variable. Find where it might have been set
+if fmt == '%s' and param.value.type == RegisterValueType.StackFrameOffset:
+    new_format_str = new_format_str.replace(fmt, str(param.value))
+```

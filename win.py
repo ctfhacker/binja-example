@@ -71,7 +71,6 @@ for sprintf in sprintfs:
     # Easy cases.. Extend for more robust matching
     m = re.findall('%[^%]', format_str)
     for fmt, param in zip(m, sprintf.params[2:]):
-        print(format_str, fmt, param, param.operation)
         if fmt == '%s' and param.operation == MediumLevelILOperation.MLIL_CONST:
             # param = string_from_addr(bv, param.constant)
             # new_format_str = new_format_str.replace(fmt, param)
@@ -80,10 +79,12 @@ for sprintf in sprintfs:
         curr_func = param.function
         index = new_format_str.find(fmt)
         
+        print(sprintf, fmt, param.value)
         # Found a stack offset variable. Find where it might have been set
         if fmt == '%s' and param.value.type == RegisterValueType.StackFrameOffset:
             new_format_str = new_format_str.replace(fmt, str(param.value))
             print('[0x{:x}] sprintf({})'.format(sprintf.address, new_format_str))
+            """
             uses = find_stack_var_uses(curr_func, param.src, sprintf.instr_index)
             for use in uses:
                 print('    ' + '-' * 20)
@@ -91,5 +92,6 @@ for sprintf in sprintfs:
                     print('    {}'.format(x))
 
             print('    ' + '-' * 20)
+            """
         else:
             new_format_str = new_format_str.replace(fmt, str(param.value))
