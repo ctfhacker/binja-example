@@ -27,10 +27,9 @@ sprintf with a `%s` format string that is a non-constant parameter
 
 ---?code=win.py&lang=python
 @[49-51](Get core Binary View object)
-
-+++
 @[53-55](Get all cross references for sprintf)
 
+---
 ```python
 >>> print(sprintf_xrefs)
 [<ref: x86_64@0x400808>, <ref: x86_64@0x400826>, <ref: x86_64@0x400847>]
