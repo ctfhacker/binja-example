@@ -25,9 +25,18 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 
 sprintf with a `%s` format string that is a non-constant parameter
 
----?code=win.py&lang=python
-@[49-51](Get core Binary View object)
-@[53-55](Get all cross references for sprintf)
+---
+```python
+# Create Binary View to access all operations
+file = sys.argv[1]
+bv = BinaryViewType.get_view_of_file(file)
+
+# Get all cross references to `sprintf` calls
+sprintf_addr = bv.symbols['sprintf'].address
+sprintf_xrefs = bv.get_code_refs(sprintf_addr)
+```
+@[1-3](Get core Binary View object)
+@[4-6](Get all cross references for sprintf)
 
 ---
 ```python
