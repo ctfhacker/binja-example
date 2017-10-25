@@ -120,7 +120,7 @@ The parameters for this sprintf
 
 ```json
 ('%s', <stack frame offset -0x118>)
-( '%d', <undetermined>)
+('%d', <undetermined>)
 ```
 
 ---
