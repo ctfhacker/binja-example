@@ -212,8 +212,7 @@ for il in func.instrutions:
         continue
 
     dest_var = il.dest
-    uses = [curr_func.get_ssa_var_uses(dst_var) 
-        if x < sprintf_instr_index]
+    uses = [curr_func.get_ssa_var_uses(dst_var) if x < sprintf_index]
 ```
 
 @[1-2](Loop through all instructions in the current function)
