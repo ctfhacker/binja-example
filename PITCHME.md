@@ -45,7 +45,7 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 * Find calls to sprintf
 * If the format string for sprintf doesn't contain %s, ignore it
 * If the parameter associated with %s is constant, ignore it
-* Slice backwards on each found parameter to find where it was used
+* Slice (dafaq?) backwards on each found parameter to find where it was used
 
 ---
 
