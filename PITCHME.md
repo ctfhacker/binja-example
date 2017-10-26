@@ -146,7 +146,7 @@ for fmt, param in zip(m, sprintf.params[2:]):
     print(format_str, fmt, param.operation)
 ```
 
-Nifty `sprintf.params` attribute will give the parameters to a function call
+_Nifty `sprintf.params` attribute will give the parameters to a function call_
 
 ``` 
 ('/tmp/%s_%d', '%s', <MLIL_VAR_SSA: 80>)
