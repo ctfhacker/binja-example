@@ -61,12 +61,6 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 SSA guarentees that each individual variable is assigned to only once
 
 ---
-![After](./after_ssa2.png)
-
----
-![After](./after_ssa3.png)
-
----
 ## Result?
 
 ```
