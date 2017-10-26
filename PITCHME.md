@@ -179,22 +179,6 @@ param.value
 ```
 
 ---
-
-```python
-# Found a stack offset variable
-# Find where it might have been set
-if fmt == '%s' and \
-    param.value.type == RegisterValueType.StackFrameOffset:
-    print('[0x{:x}] sprintf({})'.format(sprintf.address, 
-                                        new_format_str))
-
-[0x40081e] sprintf(/tmp/<stack frame offset -0x118>_%d)
-```
-
-@[1-7](Make sure we have a %s corresponding to a stack variable)
-@[8](Print what we currently have as the sprintf)
-
----
 Grab location of where the stack variable was assigned
 
 ```python
