@@ -207,7 +207,8 @@ Loop through all instrutions looking for uses of the same stack variable above t
 ```python
 # Pseudocode
 for il in func.instrutions:
-    if il.src.src != wanted_variable:
+    if il.operation != MediumLevelILOperation.MLIL_SET_VAR \
+        or il.src.src != wanted_variable:
         continue
 
     dest_var = il.dest
