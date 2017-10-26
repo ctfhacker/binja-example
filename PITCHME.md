@@ -245,7 +245,7 @@ Uses: rsi_1 -> read
 
 ---
 ```
-[0x40081e] sprintf(/tmp/<stack frame offset -0x118>_%d)
+[0x40081e] sprintf(dest, /tmp/<stack frame offset -0x118>_%d)
     --------------------
     rsi_1#2 = &var_118
     mem#5 = read(0, rsi_1#2, 0x100) @ mem#3
@@ -253,6 +253,7 @@ Uses: rsi_1 -> read
     rdi#2 = &var_118
     rax_3#4, mem#7 = strlen(rdi#1) @ mem#6
     --------------------
+    TODO: Write dest variable slice
 ```
 
 @[1](var_118 is used in the sprintf)
