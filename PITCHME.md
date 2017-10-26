@@ -211,6 +211,8 @@ curr_ins = curr_func[definition_index]
 @[1](Grab instruction index for the definition)
 @[2](Extract the instruction at the retrieved index)
 
+![ssa2](./after_ssa1.png)
+
 ---
 Loop through all instrutions looking for uses of the same stack variable above the current instruction
 
