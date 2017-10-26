@@ -244,7 +244,7 @@ Uses: rsi_1 -> read
 ![ssa](./after_ssa3.png)
 
 ---
-```
+```json
 [0x40081e] sprintf(dest, /tmp/<stack frame offset -0x118>_%d)
     --------------------
     rsi_1#2 = &var_118
