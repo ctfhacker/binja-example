@@ -52,10 +52,25 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ![Before](./before_ssa.png)
 
 ---
-
-![After](./after_ssa.png)
+![After](./after_ssa1.png)
 
 SSA guarentees that each individual variable is assigned to only once
+
+---
+![After](./after_ssa2.png)
+
+---
+![After](./after_ssa3.png)
+
+---
+## Result?
+
+```
+sprintf("/tmp/%s_%d", X, Y)
+X - var_118
+    read(0, var_118, 0x100)
+    strlen(var_118)
+```
 
 ---
 
