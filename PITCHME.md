@@ -35,7 +35,7 @@ sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
 
-@[2-4](Catch this case)
+@[2-4](Catch this case due to non-constant %s)
 @[5](Ignore this case due to constant string)
 
 ---
