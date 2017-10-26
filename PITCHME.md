@@ -243,14 +243,6 @@ Uses: rsi_1 -> read
 ![ssa](./after_ssa3.png)
 
 ---
-Make the instrutions presentable by looking up the symbol for the function
-
-```
-0x400610 -> read
-0x4005f0 -> strlen
-```
-
----
 ```
 [0x40081e] sprintf(/tmp/<stack frame offset -0x118>_%d)
     --------------------
