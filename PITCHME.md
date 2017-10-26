@@ -211,7 +211,7 @@ for il in func.instrutions:
         continue
 
     dest_var = il.dest
-    uses = [curr_func.get_ssa_var_uses(dst_var) \
+    uses = [x for x in curr_func.get_ssa_var_uses(dest_var) \
             if x < sprintf_index]
 ```
 
