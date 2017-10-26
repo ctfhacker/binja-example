@@ -3,7 +3,7 @@
 ---
 
 ## Core idea
-Not to positively identify all bugs, but guide the analyst to certain parts of the code that might contain bugs
+Guide the reverser to certain parts of code that might contain bugs using existing bug patterns
 
 ---
 
