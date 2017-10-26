@@ -167,8 +167,6 @@ for fmt, param in zip(m, sprintf.params[2:]):
 ---
 ### What do we currently have?
 
-Isolating the other sprintfs
-
 ```c
 sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 ```
