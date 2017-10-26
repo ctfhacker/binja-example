@@ -15,9 +15,9 @@ sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
 
-@[4](sprintf with _%s_ using buf into path)
 @[2](buf comes from a read)
 @[3](path comes from a malloc of 100)
+@[4](sprintf with _%s_ using buf into path)
 @[2-4](Buffer overflow of 0x100+some in buffer of 100)
 
 ---
