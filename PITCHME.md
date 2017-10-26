@@ -233,8 +233,8 @@ for il in func.instrutions:
 ```
 
 @[1-2](Loop through all instructions in the current function)
-@[4-5](Ignore any instruction that doesn't involve our found stack variable)
-@[7-9](Grab all of the uses and retrieve their corresponding instructions )
+@[3-4](Ignore any instruction that doesn't involve our found stack variable)
+@[6-9](Grab all of the uses and retrieve their corresponding instructions )
 
 ---
 Make the instrutions presentable by looking up the symbol for the function
