@@ -175,13 +175,16 @@ sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 
 The parameters for this sprintf
 
+```
+param.value
+```
+
 ```json
 ('%s', <stack frame offset -0x118>)
 ('%d', <undetermined>)
 ```
 
 ---
-We only care about the %s parameters that come from the stack
 
 ```python
 # Found a stack offset variable
