@@ -39,6 +39,9 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 @[5](Ignore this case due to constant string)
 
 ---
+
+Binary Ninja
+
 ```python
 # Create Binary View to access all operations
 file = sys.argv[1]
