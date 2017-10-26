@@ -104,7 +104,7 @@ sprintf_xrefs = bv.get_code_refs(sprintf_addr)
 Grab the Medium Level IL for each cross reference
 
 ```
-xref.medium_level_il
+xref.medium_level_il.ssa_form
 ```
 
 Why Medium Level IL? More dataflow analysis is available than assembly or Low Level IL
