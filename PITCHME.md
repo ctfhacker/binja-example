@@ -26,13 +26,13 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 sprintf with a `%s` format string that is a non-constant parameter
 
 ---
-Catch
+Catch - Dynamic %s
 
 ```c
 sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
 ```
 
-Ignore
+Ignore - Constant %s
 
 ```c
 sprintf(result, "SUCCESS: %s\n", "Log file created.");
