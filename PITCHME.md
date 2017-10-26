@@ -237,6 +237,9 @@ for il in func.instrutions:
 @[6-9](Grab all of the uses and retrieve their corresponding instructions )
 
 ---
+![ssa](./after_ssa3.png)
+
+---
 Make the instrutions presentable by looking up the symbol for the function
 
 ```
