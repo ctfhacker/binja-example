@@ -181,8 +181,12 @@ param.value
 ---
 Grab location of where the stack variable was assigned
 
+
 ```python
-definition_index = curr_func.get_ssa_var_definition(param.src) 
+s_param = sprintf.params[2].src
+<ssa <var void* rdx_1> version 3>
+
+definition_index = curr_func.get_ssa_var_definition(s_param) 
 curr_ins = curr_func[definition_index]
 ```
 
