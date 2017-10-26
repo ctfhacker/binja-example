@@ -208,7 +208,7 @@ definition_index = curr_func.get_ssa_var_definition(param.src)
 curr_ins = curr_func[definition_index]
 ```
 
-@[1](Grab instruction index for the definition)
+@[1](Grab instruction index for the definition [22])
 @[2](Extract the instruction at the retrieved index)
 
 ![ssa2](./after_ssa1.png)
