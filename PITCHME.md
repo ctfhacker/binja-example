@@ -40,7 +40,7 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 
 ---
 
-Algorithm?
+## Algorithm?
 
 * Find calls to sprintf
 * If the format string for sprintf doesn't contain %s, ignore it
@@ -49,19 +49,11 @@ Algorithm?
 
 ---
 
-## Incoming SSA
-
-### Before
-
 ![Before](./before_ssa.png)
 
 No guarentee of following registers backwards
 
 ---
-
-## Incoming SSA
-
-### After
 
 ![After](./after_ssa.png)
 
