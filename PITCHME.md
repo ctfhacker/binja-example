@@ -26,17 +26,17 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 sprintf with a `%s` format string that is a non-constant parameter
 
 ---
+Catch
 
 ```c
-printf("Enter log file\n");
-read(0, buf, 0x100);
-path = malloc(100);
 sprintf(path, "/tmp/%s_%d", buf, strlen(buf));
-sprintf(result, "SUCCESS: %s\n", "Log file created.");
 ```
 
-@[2-4](Catch this case due to non-constant %s)
-@[5](Ignore this case due to constant string)
+Ignore
+
+```c
+sprintf(result, "SUCCESS: %s\n", "Log file created.");
+```
 
 ---
 
