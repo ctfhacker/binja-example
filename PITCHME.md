@@ -220,11 +220,6 @@ for il in func.instrutions:
 @[3-4](Ignore any instruction that doesn't involve our found stack variable)
 @[6-9](Grab all of the uses and retrieve their corresponding instructions )
 
----
-Find var_118 -> rsi_1
-
-Uses: rsi_1 -> read
-
 ![ssa](./after_ssa3.png)
 
 ---
