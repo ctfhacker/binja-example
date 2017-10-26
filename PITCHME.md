@@ -237,8 +237,10 @@ for il in func.instrutions:
 @[6-9](Grab all of the uses and retrieve their corresponding instructions )
 
 ---
+```
 Find var_118 -> rsi_1
 Uses: rsi_1 -> read
+```
 
 ![ssa](./after_ssa3.png)
 
