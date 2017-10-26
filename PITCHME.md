@@ -51,8 +51,6 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 
 ![Before](./before_ssa.png)
 
-No guarentee of following registers backwards
-
 ---
 
 ![After](./after_ssa.png)
