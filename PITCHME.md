@@ -125,6 +125,8 @@ for sprintf in sprintfs:
 @[2](Grab the format string constant from the binary: 0x40095c -> /tmp/%s_%d)
 @[3-4](Ignore any format strings that don't contain %s)
 
+![ssa1](./after_ssa1.png)
+
 ---
 ## Find constant %s 
 Filter xrefs with constant %s
