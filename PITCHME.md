@@ -49,6 +49,10 @@ sprintf(result, "SUCCESS: %s\n", "Log file created.");
 
 ---
 
+## Slice? Quewha?
+
+---
+
 ![Before](./before_ssa.png)
 
 ---
