@@ -214,7 +214,7 @@ curr_ins = curr_func[definition_index]
 ![ssa2](./after_ssa1.png)
 
 ---
-Stack Variables aren't "assigned" (per ssa)
+Stack Variables aren't "assigned to" (per ssa)
 
 Loop through all instrutions looking for uses of the same stack variable above the current instruction
 
@@ -223,17 +223,16 @@ Loop through all instrutions looking for uses of the same stack variable above t
 ---
 ```python
 # Pseudocode
-for block in func:
-    for il in block:
-        if il.src.src != wanted_variable:
-            continue
+for il in func.instrutions:
+    if il.src.src != wanted_variable:
+        continue
 
-        dest_var = il.dest
-        uses = [curr_func.get_ssa_var_uses(dst_var) 
-            if x < sprintf_instr_index]
+    dest_var = il.dest
+    uses = [curr_func.get_ssa_var_uses(dst_var) 
+        if x < sprintf_instr_index]
 ```
 
-@[1-3](Loop through all instructions in the current function)
+@[1-2](Loop through all instructions in the current function)
 @[4-5](Ignore any instruction that doesn't involve our found stack variable)
 @[7-9](Grab all of the uses and retrieve their corresponding instructions )
 
