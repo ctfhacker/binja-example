@@ -90,8 +90,7 @@ sprintf_xrefs = bv.get_code_refs(sprintf_addr)
 ```python
 >>> print(sprintf_xrefs)
 [<ref: x86_64@0x400808>, 
- <ref: x86_64@0x400826>, 
- <ref: x86_64@0x400847>]
+ <ref: x86_64@0x400826>]
 ```
 
 ---
